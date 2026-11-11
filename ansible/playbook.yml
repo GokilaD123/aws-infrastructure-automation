@@ -1,0 +1,23 @@
+---
+- name: Configure Apache Web Server
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Install Apache
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+        update_cache: yes
+
+    - name: Start and enable Apache
+      ansible.builtin.service:
+        name: apache2
+        state: started
+        enabled: yes
+
+    - name: Create website index page
+      ansible.builtin.copy:
+        content: "Welcome to AWS DevOps Infrastructure Project"
+        dest: /var/www/html/index.html
+        mode: '0644'
