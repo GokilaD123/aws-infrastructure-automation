@@ -19,8 +19,10 @@ This project demonstrates Infrastructure as Code (IaC) using Terraform and autom
 
 ## Current Implementation
 - Terraform configuration created and validated.
-- Ansible playbook executed successfully on a local Ubuntu environment.
-- Apache web server installed and tested locally.
+- Ansible playbook successfully executed on a local Ubuntu WSL environment.
+- Apache web server verified using curl.
+- Website content successfully served from localhost
+
 
 ## Project Status
 AWS infrastructure deployment is not yet performed.
