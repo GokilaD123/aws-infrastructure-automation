@@ -17,3 +17,12 @@ output "security_group_id" {
   description = "Web Security Group ID"
   value       = aws_security_group.web.id
 }
+output "web_instance_id" {
+  description = "EC2 web server instance ID"
+  value       = aws_instance.web.id
+}
+
+output "web_public_ip" {
+  description = "Public IP address of the web server"
+  value       = aws_instance.web.public_ip
+}
