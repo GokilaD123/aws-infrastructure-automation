@@ -26,3 +26,27 @@ This project demonstrates Infrastructure as Code (IaC) using Terraform and autom
 
 ## Project Status
 AWS infrastructure deployment is not yet performed.
+
+## How to Test Locally
+
+### 1. Validate Terraform
+```bash
+cd terraform
+terraform fmt -check
+terraform init
+terraform validate
+```
+
+### 2. Test Ansible
+
+```bash
+cd ../ansible
+ansible-playbook playbook.yml --syntax-check
+ansible-playbook playbook.yml -K
+```
+
+### 3. Verify Apache
+
+```bash
+curl http://localhost
+```
